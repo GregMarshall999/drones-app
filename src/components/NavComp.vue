@@ -5,7 +5,7 @@
         </section>
 
         <section class="links">
-            <RouterLink to="/">{{ $t('components.nav.homePage') }}</RouterLink>
+            <RouterLink :to="localePath('/')">{{ $t('components.nav.homePage') }}</RouterLink>
         </section>
 
         <section class="lang-switcher">
@@ -16,4 +16,7 @@
 
 <script setup lang="ts">
 import LangSwitcher from '@components/LangSwitcher.vue'
+import { useLocaleRouter } from '@/composables/useLocaleRouter'
+
+const { localePath } = useLocaleRouter()
 </script>

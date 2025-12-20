@@ -1,17 +1,18 @@
 <template>
-    <select v-model="localeStore.locale">
+    <select v-model="localeStore.locale" @change="handleLocaleChange">
         <option value="en">English</option>
         <option value="fr">Français</option>
     </select>
 </template>
 
 <script setup lang="ts">
-import { watch } from 'vue'
 import { useLocaleStore } from '@/stores/locale'
+import { useLocaleRouter } from '@/composables/useLocaleRouter'
 
 const localeStore = useLocaleStore()
+const { switchLocale } = useLocaleRouter()
 
-watch(() => localeStore.locale, (newLocale) => {
-    localeStore.setLocale(newLocale)
-})
+const handleLocaleChange = () => {
+    switchLocale(localeStore.locale)
+}
 </script>

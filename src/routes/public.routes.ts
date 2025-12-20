@@ -4,7 +4,7 @@ import HomePage from '@/views/public/HomePage.vue';
 
 export const publicRoutes: RouteType[] = [
     {
-        path: '/',
+        path: '/:locale',
         name: 'home',
         component: HomePage,
     },

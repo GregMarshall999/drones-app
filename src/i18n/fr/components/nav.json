@@ -1,7 +1,9 @@
 {
     "components": {
         "nav": {
-            "homePage": "Page d'accueil"
+            "homePage": "Accueil",
+            "contactPage": "Contact",
+            "requestPage": "Prendre rendez-vous"
         }
     }
 }

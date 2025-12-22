@@ -6,6 +6,8 @@
 
         <section class="links">
             <RouterLink :to="localePath('/')">{{ $t('components.nav.homePage') }}</RouterLink>
+            <RouterLink :to="localePath('/contact')">{{ $t('components.nav.contactPage') }}</RouterLink>
+            <RouterLink :to="localePath('/request')">{{ $t('components.nav.requestPage') }}</RouterLink>
         </section>
 
         <section class="lang-switcher">

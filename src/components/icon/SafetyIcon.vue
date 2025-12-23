@@ -1,3 +1,3 @@
 <template>
-    Placeholder for SafetyIcon svg
+    <span class="material-symbols-outlined primary">shield</span>
 </template>

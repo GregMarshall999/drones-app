@@ -1,3 +1,3 @@
 <template>
-    Placeholder for FlightTimeIcon svg
+    <span class="material-symbols-outlined primary">flight</span>
 </template>

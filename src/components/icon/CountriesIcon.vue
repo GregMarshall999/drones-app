@@ -1,3 +1,3 @@
 <template>
-    Placeholder for CountriesIcon svg
+    <span class="material-symbols-outlined primary">public</span>
 </template>

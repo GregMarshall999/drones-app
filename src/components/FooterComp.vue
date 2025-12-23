@@ -41,7 +41,7 @@
         </section>
 
         <section class="footer-bottom">
-            <p>© 2025 Drone Op. All rights reserved.</p>
+            <p>© 2025 DroneOps. All rights reserved.</p>
 
             <div class="social-links">
                 <a href="https://www.facebook.com/droneop"><FacebookIcon /></a>

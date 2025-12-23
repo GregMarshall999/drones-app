@@ -13,7 +13,10 @@
 
                 <div class="moto-actions">
                     <RouterLink :to="localePath('/booking')">Book a Pilot</RouterLink>
-                    <button>Watch Reel</button>
+                    <button>
+                        <span class="material-symbols-outlined">play_circle</span>
+                        Watch Reel
+                    </button>
                 </div>
             </article>
 
@@ -205,3 +208,90 @@ import { storeToRefs } from 'pinia'
 const { version } = storeToRefs(useVersionStore())
 const { localePath } = useLocaleRouter()
 </script>
+
+<style scoped lang="scss">
+@import '@sass/main.scss';
+@import '@sass/link.scss';
+
+.hero {
+    background-color: $bg-light;
+    border-bottom: 1px solid $secondary-color;
+
+    padding: 1em 18em;
+
+    .moto {
+        position: relative;
+        border-radius: 0.5em;
+        display: flex;
+        gap: 2em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 10em 12em;
+        overflow: hidden;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('@/assets/city.png');
+            background-size: 100% 90%;
+            background-repeat: no-repeat;
+            filter: blur(2px);
+            z-index: 0;
+        }
+
+        > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .availability {
+            color: $primary-color;
+            border: 1px solid $primary-color;
+            background-color: $primary-color-dark;
+            border-radius: 1em;
+            padding: 0 0.5em;
+            width: fit-content;
+        }
+
+        h1 {
+            width: 50%;
+            text-align: center;
+            margin: 0;
+        }
+
+        p {
+            text-align: center;
+            margin: 0;
+        }
+
+        .moto-actions {
+            display: flex;
+            gap: 1em;
+
+            a {
+                @include link-style;
+                font-size: 14px;
+                display: flex;
+                align-items: center;
+            }
+
+            button {
+                display: flex;
+                align-items: center;
+                gap: 0.5em;
+
+                border: 1px solid #67707e;
+                background-color: #444a53;
+                color: $text-color;
+                border-radius: 0.5em;
+                padding: 0.5em 1em;
+            }
+        }
+    }
+}
+</style>

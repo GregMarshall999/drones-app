@@ -1,0 +1,8 @@
+@import '@sass/main.scss';
+
+@mixin link-style() {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+}

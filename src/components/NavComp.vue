@@ -1,16 +1,16 @@
 <template>
-    <nav class="background-light">
+    <nav>
         <RouterLink class="logo" :to="localePath('/')">
             <LogoIcon />
             <h1>DroneOps</h1>
         </RouterLink>
 
         <div class="links">
-            <button class="b-link">{{ $t('components.nav.services') }}</button>
-            <button class="b-link">{{ $t('components.nav.squadron') }}</button>
-            <button class="b-link">{{ $t('components.nav.previous-work') }}</button>
+            <button>{{ $t('components.nav.services') }}</button>
+            <button>{{ $t('components.nav.squadron') }}</button>
+            <button>{{ $t('components.nav.previous-work') }}</button>
             <RouterLink :to="localePath('/contact')">{{ $t('components.nav.contact') }}</RouterLink>
-            <RouterLink :to="localePath('/booking')">{{ $t('components.nav.book') }}</RouterLink>
+            <RouterLink class="primary-link" :to="localePath('/booking')">{{ $t('components.nav.book') }}</RouterLink>
             <LangSwitcher />
         </div>
     </nav>
@@ -24,36 +24,57 @@ import { useLocaleRouter } from '@/composables/useLocaleRouter'
 const { localePath } = useLocaleRouter()
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import '@sass/main.scss';
+@import '@sass/link.scss';
 
 nav {
     display: flex;
     justify-content: space-between;
     padding: 0.5em 2em;
-}
+    background-color: $bg-light;
+    border-bottom: 1px solid $secondary-color;
 
-.logo {
-    display: flex;
-    align-items: center;
-    gap: 0.5em;
-}
+    .logo {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        color: $primary-color;
+        text-decoration: none;
 
-h1 {
-    font-size: 18px;
-}
+        h1 {
+            font-size: 18px;
+            font-family: $sg-font;
+            color: $text-color;
+        }
+    }
 
-.links {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-}
+    .links {
+        display: flex;
+        align-items: center;
+        gap: 1em;
 
-.b-link {
-    background: none;
-    border: none;
-    color: #fafafa;
-    font-family: 'Space Grotesk', sans-serif;
-    cursor: pointer;
+        button {
+            background: none;
+            border: none;
+            color: $text-color;
+            font-family: $sg-font;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        a {
+            color: $text-color;
+            text-decoration: none;
+            font-family: $sg-font;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        .primary-link {
+            @include link-style;
+        }
+    }
 }
 
 </style>

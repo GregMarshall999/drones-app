@@ -16,6 +16,7 @@ export default defineConfig({
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
       '@helpers': fileURLToPath(new URL('./src/helpers', import.meta.url)),
       '@i18n': fileURLToPath(new URL('./src/i18n', import.meta.url)),
+      '@sass': fileURLToPath(new URL('./src/sass', import.meta.url)),
     },
   },
 })

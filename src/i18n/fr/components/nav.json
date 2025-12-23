@@ -1,9 +1,11 @@
 {
     "components": {
         "nav": {
-            "homePage": "Accueil",
-            "contactPage": "Contact",
-            "requestPage": "Prendre rendez-vous"
+            "contact": "Contact",
+            "previous-work": "Travaux précédents",
+            "book": "Commander un pilote",
+            "services": "Nos services",
+            "squadron": "Escadrille"
         }
     }
 }

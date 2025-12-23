@@ -2,7 +2,7 @@ import type { RouteType } from "@/types/route.type";
 
 import HomePage from '@/views/public/HomePage.vue';
 import ContactPage from '@/views/public/ContactPage.vue';
-import RequestPage from '@/views/public/RequestPage.vue';
+import BookingPage from '@/views/public/BookingPage.vue';
 
 export const publicRoutes: RouteType[] = [
     {
@@ -16,8 +16,8 @@ export const publicRoutes: RouteType[] = [
         component: ContactPage,
     },
     {
-        path: '/:locale/request',
-        name: 'request',
-        component: RequestPage,
+        path: '/:locale/booking',
+        name: 'booking',
+        component: BookingPage,
     }
 ];

@@ -1,9 +1,11 @@
 {
     "components": {
         "nav": {
-            "homePage": "Home",
-            "contactPage": "Contact",
-            "requestPage": "Book an appointment"
+            "contact": "Contact",
+            "previous-work": "Previous Work",
+            "book": "Book a Pilot",
+            "services": "Services",
+            "squadron": "Squadron"
         }
     }
 }
